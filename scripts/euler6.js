@@ -11,7 +11,7 @@ var main = function () {
     $("#answer").html(Math.abs(squareSum * squareSum - sumSquares));
     var t1 = performance.now();
     $("#calc-time").html(t1-t0);
-}
+};
 
 
 $(document).ready(main);

@@ -3,7 +3,9 @@ var longNumber = "73167176531330624919225119674426574742355349194934969835203127
 function main() {
     var t0 = performance.now();
     var maxProduct = 0;
-    var numberArray = longNumber.split('').map(function(digitString){return parseInt(digitString)});
+    var numberArray = longNumber.split('').map(function(digitString) {
+      return parseInt(digitString);
+    });
     var product;
     for (var i = 0; i < (numberArray.length - 13); i++) {
         product = numberArray[i];

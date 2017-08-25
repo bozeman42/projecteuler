@@ -13,6 +13,6 @@ var main = function () {
   var t1 = performance.now();
   $('#calc-time').html(parseInt(t1-t0));
   $('#answer').html(sum);
-}
+};
 
 $(document).ready(main);

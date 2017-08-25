@@ -55,19 +55,19 @@ var main = function(){
     $("#answer").html(maxProduct);
     $('#calc-time').html(parseInt(t1-t0));
   }
-  
-}
+
+};
 
 var multiplyFourGridNums = function(grid, row, column, rowDelta, columnDelta) {
   var product = grid[row][column];
-  var multis = []
+  var multis = [];
   multis.push(product);
   for (var i = 1; i < 4; i++) {
     product *= grid[row + i * rowDelta][column + i * columnDelta];
     multis.push(grid[row + i * rowDelta][column + i * columnDelta]);
   }
   return product;
-}
+};
 
 
 $(document).ready(main);

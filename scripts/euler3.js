@@ -11,6 +11,6 @@ var main = function() {
   var t1 = performance.now();
   $('#answer').html(maxFactor);
   $('#calc-time').html(t1-t0);
-}
+};
 
 $(document).ready(main);

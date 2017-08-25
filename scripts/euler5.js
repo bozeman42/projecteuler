@@ -8,7 +8,7 @@ var main = function() {
     var t1 = performance.now();
     $('#calc-time').html(t1-t0);
     $('#answer').html(result);
-}
+};
 
 var div1to20 = function(x) {
     for(var i = 1; i <=20; i++) {
@@ -17,7 +17,7 @@ var div1to20 = function(x) {
         }
     }
     return true;
-}
+};
 
 
 

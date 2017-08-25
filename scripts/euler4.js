@@ -20,29 +20,29 @@ var main = function() {
             }
         }
     }
-}
+};
 
 var checkHigher = function(x,y) {
     var higherPal = x*y;
-    var result = [x,y,higherPal]
+    var result = [x,y,higherPal];
     for (;x < 1000; x++) {
-        for (var y = 100; y < 1000; y++) {
+        for (y = 100; y < 1000; y++) {
             var product = x * y;
             if (isPalindrome(product)) {
                 if (product > higherPal) {
                     higherPal = product;
-                    result = [x,y,higherPal]
+                    result = [x,y,higherPal];
                 }
             }
         }
     }
     return result;
-}
+};
 
 var isPalindrome = function(x) {
     var temp = x.toString();
     temp = temp.split('');
-    return parseInt(temp.join('')) == parseInt(temp.reverse().join(''))
-}
+    return parseInt(temp.join('')) == parseInt(temp.reverse().join(''));
+};
 
 $(document).ready(main);
