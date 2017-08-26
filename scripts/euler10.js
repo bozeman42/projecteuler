@@ -13,14 +13,13 @@ function main() {
         numArray.push(i);
     }
     var sum = 2;
-    for (var j = 3; numArray.length > 0; j = numArray[0]) {
+    for (var j = 3; j < Math.sqrt(2000000); j = numArray[0]) {
         sum += j;
-        if (j < Math.sqrt(2000000)) {
-          numArray = filterPrime(numArray,j);
-        } else {
-          numArray.shift();
-        }
+        numArray = filterPrime(numArray,j);
     }
+    sum += numArray.reduce(function(a,b){
+      return (a + b);
+    },0);
     var t1 = performance.now();
     $("#answer").text(sum);
     $("#calc-time").html((t1 - t0).toFixed(3));
