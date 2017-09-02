@@ -1,7 +1,6 @@
 const NUMBER_OF_FACTORS = 500;
 
 function main() {
-  var maxFactors = 0;
   var t0 = performance.now();
   var factors = 0;
   var triangularNumber = 0;
@@ -20,21 +19,15 @@ function main() {
         exponentArray.push(exponent);
       }
     }
-    exponentArray = exponentArray.map(function(exponent){
-      return (exponent + 1);
-    });
     factors = exponentArray.reduce(function(a,b){
-      return (a * b);
+      return (a * (b + 1));
     },1);
-    if (factors > maxFactors) {
-      maxFactors = factors;
-    }
+  
+  }
   var t1 = performance.now();
   $("#answer").html(triangularNumber);
   $('#calc-time').html(parseInt(t1-t0));
-  }
+  console.log(triangularNumber);
 }
-
-
 
 $(document).ready(main);
